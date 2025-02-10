@@ -1,0 +1,78 @@
+body {
+    height: 200vh; /* Pour permettre le défilement */
+    margin: 0;
+    padding-top: 0;
+    background: linear-gradient(#0F1923, #1D2227);
+}
+
+.header{
+    position: fixed;
+    display: flex;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    background-color: #FF4656;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo img{
+    width: 95px;
+    height: 26px;
+
+}
+
+.menu-toggle {
+display: none;
+flex-direction: column;
+cursor: pointer;
+}
+
+.menu-toggle .bar {
+height: 3px;
+width: 25px;
+background-color: #fff;
+margin: 3px 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+.nav-links {
+display: none;
+flex-direction: column;
+width: 100%;
+position: absolute;
+top: 60px;
+left: 0;
+background-color: #333;
+}
+
+.nav-links.active {
+display: flex;
+}
+
+.menu-toggle {
+display: flex;
+}
+}
+
+.parallax {
+    
+    background-color: black;
+    margin-top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    width: 50%; /* Largeur de l'image */
+    height: 800px; /* Hauteur de l'image */
+    overflow: hidden;
+}
+
+.parallax-img {
+    width: 100%; /* L'image est plus large que son conteneur */
+    height: 100%;
+    object-fit: cover;
+}

@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/atropos@2.0.2/atropos.min.css">
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+.parent {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 0px;
+
+}
+
+.div1 { grid-area: 1 / 1 / 2 / 2;
+
+}
+.div2 { grid-area: 1 / 2 / 2 / 7; }
+
+.parent1 {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+
+    background: linear-gradient(#FF4656, #992A34);
+
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+}
+
+
+.div33 { grid-area: 3 / 3 / 4 / 5; }
+.div4 { grid-area: 1 / 6 / 4 / 7; }
+.div5 { grid-area: 1 / 2 / 9 / 3; }
+.div6 { grid-area: 1 / 3 / 9 / 4; }
+.div7 { grid-area: 1 / 4 / 9 / 5; }
+.div8 { grid-area: 1 / 1 / 1 / 1; }
+.footer { grid-area: 10 / 1 / 13 / 7;}
+
+
+
+.navbar {
+    
+    display: grid;
+    background-color: #0F1923;
+
+}
+
+
+.div1 img{
+    width: 15%;    
+}
+
+.div2{
+    align-content: center;
+}
+.logo{
+    width: 70vw;
+    height: 10vh;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #f39c12;
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-toggle .bar {
+    height: 3px;
+    width: 25px;
+    background-color: #fff;
+    margin: 3px 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: #333;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+}
+
+    .sova {
+
+        grid-area: 0 / 2 / 9 / 3;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 20px;
+        object-fit: contain;
+
+    }
+
+    .sova1 {
+
+        grid-area: 0 / 3 / 9 / 4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 20px;
+        object-fit: contain;
+
+}
+
+    .sova2 {
+
+        grid-area: 0 / 4 / 9 / 5;;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 20px;
+        object-fit: contain;
+
+}
+
+    .sova3 {
+
+        grid-area: 0 / 5 / 9 / 6;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 20px;
+        object-fit: contain;
+
+}
+
+    .atropos {
+        width: 200px;
+        height: 300px;
+
+    }
+
+    .atropos-inner {
+        
+       background-image: url("/img/carte-sova.png");
+       background-size:contain;
+       background-repeat: no-repeat;
+    }
+
+    .atropos-inner1 {
+        
+        background-image: url("/img/carte-sova.png");
+        background-size:contain;
+        background-repeat: no-repeat;
+     }
+ 
+
+
+    .floating-element {
+        position: absolute;
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        object-fit: contain;
+
+    }
+
+    .element-1 {
+        top: 20%;
+        left: 20%;
+    }
+
+    .element-2 {
+        bottom: 20%;
+        right: 20%;
+        width: 60px;
+        height: 60px;
+    }
+</style>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+   
+
+
+    <div class="parent">
+
+        <nav class="navbar">
+        <div class="div1"> <img src="/img/logo-riot.png" alt=""> </div>
+        <div class="div2">
+            
+            <ul class="nav-links">
+                <li><a href="#home">Accueil</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">À propos</a></li>
+                <li><a href="#contact">Contact</a></li>
+
+                
+            </ul>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav> </div>
+        </div>
+        <div><h1>tyrth</h1></div>
+
+    <div class="parent1">
+        
+
+        <div class="div22"> </div>
+        <div class="div33"> </div>
+        <div class="div4"><h1>Agents</h1> </div>
+        
+        <div class="sova">
+            <div class="atropos my-atropos">
+                <div class="atropos-scale">
+                    <div class="atropos-rotate">
+                        <div class="atropos-inner">
+                            <div class="card-content">
+                                <div class="floating-element element-1" data-atropos-offset="5"></div>
+                                <div class="floating-element element-2" data-atropos-offset="3"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        </div>
+        <div class="sova1">
+            <div class="atropos my-atropos1">
+                <div class="atropos-scale">
+                    <div class="atropos-rotate">
+                        <div class="atropos-inner">
+                            <div class="card-content">
+                                <div class="floating-element element-1" data-atropos-offset="5"></div>
+                                <div class="floating-element element-2" data-atropos-offset="3"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        </div>
+        <div class="sova2">
+            <div class="atropos my-atropos">
+                <div class="atropos-scale">
+                    <div class="atropos-rotate">
+                        <div class="atropos-inner">
+                            <div class="card-content">
+                                <div class="floating-element element-1" data-atropos-offset="5"></div>
+                                <div class="floating-element element-2" data-atropos-offset="3"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        </div>
+        <div class="sova3">
+            <div class="atropos my-atropos">
+                <div class="atropos-scale">
+                    <div class="atropos-rotate">
+                        <div class="atropos-inner">
+                            <div class="card-content">
+                                <div class="floating-element element-1" data-atropos-offset="5"></div>
+                                <div class="floating-element element-2" data-atropos-offset="3"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        </div>
+    </div>
+    
+      
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/atropos@2.0.2/atropos.min.js"></script>
+
+    <script>
+        if (typeof Atropos !== 'undefined') {
+            const elements = document.querySelectorAll('.my-atropos, .my-atropos1');
+            elements.forEach((el) => {
+                Atropos({
+                    el: el,
+                    activeOffset: 40,
+                    shadowScale: 0.5,
+                    highlight: false,
+                    rotateXMax: 25,
+                    rotateYMax: 25,
+                    stretchX: 40,
+                    stretchY: 40,
+                });
+            });
+        } else {
+            console.error('Atropos library not loaded correctly');
+        }
+    </script>
+</body>
+</html>
