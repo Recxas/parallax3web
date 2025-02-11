@@ -50,6 +50,7 @@
                 <div class="atropos-scale">
                     <div class="atropos-rotate">
                         <div class="atropos-inner" id="sova">
+                            <img class="glitch" src="/img/carte-sova.png" alt="">
                             <div class="card-content">
                                 <div class="floating-element element-1" data-atropos-offset="5"></div>
                                 <div class="floating-element element-2" data-atropos-offset="3"></div>
@@ -120,6 +121,7 @@
 
 
     <script src="https://cdn.jsdelivr.net/npm/atropos@2.0.2/atropos.min.js"></script>
+    <script src="https://unpkg.com/powerglitch@latest/dist/powerglitch.min.js"></script>
 
     <script>
         if (typeof Atropos !== 'undefined') {
@@ -139,6 +141,35 @@
         } else {
             console.error('Atropos library not loaded correctly');
         }
+
+        PowerGlitch.glitch('.glitch',
+        {
+            playMode: "hover",
+            optimizeSeo: true,
+            createContainers: true,
+            hideOverflow: false,
+            timing: {
+              duration: 2000
+            },
+            glitchTimeSpan: {
+              start: 0,
+              end: 0.7
+            },
+            shake: {
+              velocity: 10,
+              amplitudeX: 0.05,
+              amplitudeY: 0.05
+            },
+            slice: {
+              count: 3,
+              velocity: 1,
+              minHeight: 0.03,
+              maxHeight: 0.15,
+              hueRotate: true
+            },
+            pulse: false
+        }
+        )
     </script>
 </body>
 </html>
