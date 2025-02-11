@@ -5,34 +5,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Simple Parallax Example</title>
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <header class="header">
-        <a href="#" class="logo"> <img src="/img/logo-riot.png" alt=""></a>
-         <nav class="navbar">     
-                <a href="#">Présentation</a>
-                <a href="#">Médias</a>
-                <a href="#">Actualités</a>
-                <a href="#">Classement</a>
-                <a href="#">Support</a>
-                <a href="#">Social</a>
-                <a href="#">Plus</a>
-         </nav>
-    </header>
+    <div class="parent">
 
+        <div class="parallax">
+            <img src="/img/Sova.png" alt="Image Parallax" class="parallax-img">
+        </div>
 
-    <div class="parallax">
-        <img src="/img/Sova.png" alt="Image Parallax" class="parallax-img">
+        <div class="navbar">  
+
+            <ul class="nav-links">
+                <div class="logosite">
+                    <a href=""><img class="Riotblanc" src="/img/logo-riot.png" alt=""></a>
+                    <a href=""><img class="Riotrouge" src="/LogoRiot/FullLockup/002_RG_2021_FULL_LOCKUP_RED.png" alt=""></a>
+                </div>
+                <div class="">
+                    <img src="/img/logovalorantb.png" alt="" class="logob">
+                </div>                
+                <li><a href="#home">Présentation</a></li>
+                <li><a href="#services">Médias</a></li>
+                <li><a href="#about">Actualités</a></li>
+                <li><a href="#contact">Classement</a></li>
+                <li><a href="#contact">Support</a></li>
+                <li><a href="#contact">Social</a></li>
+                <li><a href="#contact">Plus</a></li>
+    
+            </ul>
+            
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+    
+        
+        </div>
     </div>
 
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/simple-parallax-js/5.6.2/simpleParallax.min.js"></script>
+    
     <script>
         // Initialiser SimpleParallax
         const image = document.getElementsByClassName('parallax-img');
         new simpleParallax(image, {
-            scale: 1.5,           // Niveau de zoom
+            scale: 2,           // Niveau de zoom
             delay: .6,            // Délai de l'animation  // Type de transition
             orientation:'right',
             overflow: true        // Permet le débordement de l'image
