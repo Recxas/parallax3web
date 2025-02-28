@@ -1,0 +1,112 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    width: 100%;
+    height: 500vh;
+}
+
+/* Cache la barre de scroll pour Chrome, Safari et Edge */
+.scroll-container::-webkit-scrollbar {
+    display: none;
+}
+
+.scroll-container {
+      display: flex;
+      overflow-x: auto; /* Permet le défilement horizontal */
+      width: max-content; /* Utilise toute la largeur de l'écran */
+      max-width: 100%; /* S'adapte à la largeur de l'écran /
+      scrollbar-width: none; /* Cache la barre de scroll pour Firefox */
+      -ms-overflow-style: none; /* Cache la barre de scroll pour Edge et IE */
+}
+
+.container {
+      display: flex;
+      width: 100vw;
+      background-color: #1E1E1E;
+      margin-right: 20px; /* Espace entre les conteneurs */
+      scroll-snap-align: start; /* Assure que chaque conteneur se "snap" à la position de départ */
+}
+
+.text {
+      flex: 1;
+      padding: 20px;
+      color: white;
+      width: 495px;
+}
+
+h1 {
+      font-weight: bold;
+      font-size: 2em;
+      margin-bottom: 10px;
+      text-align: center;
+}
+
+p {
+      font-size: 1.1em;
+}
+
+.highlight {
+      font-weight: bold;
+      color: #FF4656; /* Couleur de surlignage */
+}
+
+.cercle {
+      display: flex;
+      justify-content: center;
+}
+
+.cercle img {
+      width: 20%;
+}
+
+.video-container {
+      position: relative;
+      width: 640px;
+      height: 360px;
+      overflow: hidden;
+}
+
+.cover-image {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transition: opacity 0.5s ease;
+      z-index: 2;
+}
+
+.video {
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      transition: opacity 0.5s ease;
+      pointer-events: none; /* Évite toute interaction avec la vidéo lorsqu'elle est cachée */
+      position: absolute;
+      top: 0;
+      left: 0;
+}
+
+  .video-container:hover .video {
+      opacity: 1;
+      pointer-events: auto; /* Active l'interaction avec la vidéo lorsqu'elle est visible */
+ }
+
+.video-container:hover .cover-image {
+    opacity: 0; /* Cacher l'image au survol */
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Couche semi-transparente noire */
+    transition: opacity 0.5s ease;
+    z-index: 3; /* Au-dessus de l'image et de la vidéo */
+}
+.video-container:hover .overlay {
+    opacity: 0; /* Disparaît au survol */
+}
